@@ -1,3 +1,65 @@
- .isActive {
-	font-size: 3rem;
+body {
+  background-color: rgba(5, 0, 36, 0.979);
+  color: white;
+}
+
+.homePage {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  background-color: #757575;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+}
+
+.navbar-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-item {
+  margin: 0 10px;
+  width: 100;
+}
+
+.navbar-item a {
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 10px;
+  position: relative;
+  /* transition: 0.5s ease-in-out; */
+}
+
+.navbar-item img {
+	max-width: 4rem; /* Adjust the max-width to your desired size */
+	transform: scale(2);
+	height: auto; /* Maintain aspect ratio */
+ }
+
+
+ .navbar-item a:hover::before {
+	content: "";
+	position: absolute;
+	width: 0; /* Initial width is zero */
+	height: 2px; /* Border height */
+	bottom: 0;
+	left: 50%; /* Start from the middle */
+	background-color: #fff;
+	transition: width 0.3s ease-in-out; /* Add a transition effect */
+ }
+ 
+ .navbar-item a:hover::before {
+	width: 100%; /* Expand to the sides */
+	left: 0; /* Start from the left edge */
  }
