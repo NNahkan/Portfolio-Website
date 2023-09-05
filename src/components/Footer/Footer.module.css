@@ -1,0 +1,15 @@
+.footerFlex {
+	display: flex;
+	margin: 1rem 0;
+ }
+
+ .footerLink {
+	margin: 0 1rem;
+	opacity: 0.7;
+	transition: .3s ease-in-out;
+ }
+
+ .footerLink:hover {
+	opacity: 1;
+	transform: scale(1.1);
+ }

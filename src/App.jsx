@@ -3,6 +3,7 @@ import Contact from "./components/Contact/Contact";
 import About from "./components/About/About";
 import Navbar from "./components/Navbar/Navbar";
 import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

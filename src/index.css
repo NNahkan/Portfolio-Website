@@ -17,3 +17,9 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
