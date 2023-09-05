@@ -3,6 +3,10 @@
   --background-color: #75757500;
 }
 
+svg {
+  display: block;
+}
+
 body {
   background-color: rgba(5, 0, 36, 0.979);
   color: white;
