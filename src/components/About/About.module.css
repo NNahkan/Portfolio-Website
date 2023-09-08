@@ -1,0 +1,72 @@
+.headerFlex {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+}
+
+.headerFlex h1 {
+  font-size: 4rem;
+}
+
+.headerFlex h3 {
+  font-style: italic;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  float: right;
+  text-align: right;
+  border-top: 2px solid white;
+  padding-top: 2rem;
+}
+
+.detailMeFlex {
+  display: flex;
+  margin: 4rem 0;
+  gap: 5rem;
+}
+
+.detailMeFlex > div h2 {
+  font-size: 2.5rem;
+}
+
+.introduce {
+  flex: 5;
+}
+
+.mySkills {
+  flex: 3;
+}
+.skillList {
+  text-transform: capitalize;
+  position: relative;
+  list-style: none;
+}
+
+.skillList::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+}
+
+.skillSingle {
+  margin: 1rem 0;
+  position: relative;
+}
+
+.skillSingle::before {
+	content: " ";
+	/* background: var(--mark); */
+	display: inline-block;
+	position: absolute;
+	border-radius: 50%;
+	border: 2px solid white;
+	left: -7px;
+	width: 15px;
+	height: 15px;
+	margin-top: 3px;
+	z-index: 400;
+}
+
