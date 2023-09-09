@@ -45,28 +45,30 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0;
+  top: 9px;
   width: 1px;
-  height: 100%;
-  background-color: white;
+  height: 92%;
+   background-color: white;
 }
 
 .skillSingle {
   margin: 1rem 0;
   position: relative;
+  padding: 0 0 2rem 2rem;
 }
 
 .skillSingle::before {
 	content: " ";
-	/* background: var(--mark); */
+	background: black;
 	display: inline-block;
 	position: absolute;
 	border-radius: 50%;
 	border: 2px solid white;
-	left: -7px;
-	width: 15px;
-	height: 15px;
-	margin-top: 3px;
-	z-index: 400;
+	left: -9px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	/* margin-top: 3px; */
+	z-index: 30;
 }
 
