@@ -10,7 +10,7 @@ const Contact = () => {
   return (
     <div className="container">
       <h1>Contact</h1>
-      <p>Get in touch or shoot me an email directly on hoksuz2424@gmail.com</p>
+      <p>Get in touch or shoot me an email directly on hoksuz2424@gmail.com </p>
       <form className={s.contactForm} action="">
         {formData.map((item) => (
           <input
@@ -24,9 +24,9 @@ const Contact = () => {
           className={`${s.inputForm} ${s.messageArea}`}
           name="message"
           placeholder="Message"
-          rows="8"
+          rows="5"
         ></textarea>
-        <button>Send Message</button>
+        <button className="btn">Send Message</button>
       </form>
     </div>
   );

@@ -1,19 +1,27 @@
 .contactForm {
-	display: flex;
-	flex-direction: column;
-	max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
 }
 
 .inputForm {
-	font-size: 1.5rem;
-	color: white;
-	background-color: transparent;
-	padding: 1rem;
-	text-transform: capitalize;
-	margin-bottom: 1rem;
-	border: 1px solid rgb(24, 24, 24);
+  font-size: 1.5rem;
+  color: white;
+  background-color: transparent;
+  padding: 1rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
-.messageArea{
-	resize: none;
+.inputForm:focus {
+  background-color: rgba(255, 255, 255, 0.05);
+ }
+
+.messageArea {
+  resize: none;
 }
