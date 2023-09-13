@@ -7,14 +7,12 @@
 
 .projectSingle {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .projectSingle > div {
   flex: 1;
-  text-align: center;
   padding: 0 1rem;
   margin: 2rem 0;
 }
@@ -31,7 +29,7 @@
 }
 
 .imgWrap img:hover {
-  transform: scale(1.01);
+  transform: scale(1.002);
   box-shadow: 0 0 6px var(--main-color);
   opacity: 1;
 }
