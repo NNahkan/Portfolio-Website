@@ -2,6 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
+import ToggleTheme from "../ToggleTheme/ToggleTheme";
 
 const Navbar = () => {
   return (
@@ -15,9 +16,6 @@ const Navbar = () => {
         </Link>
         <ul className={s.navbarList}>
           <li className={s.navbarItem}>
-            <Link to="/">Home</Link>
-          </li>
-          <li className={s.navbarItem}>
             <Link to="/contact">Contact</Link>
           </li>
           <li className={s.navbarItem}>
@@ -25,6 +23,9 @@ const Navbar = () => {
           </li>
           <li className={s.navbarItem}>
             <Link to="/projects">Projects</Link>
+          </li>
+          <li className={s.navbarItem}>
+            <ToggleTheme />
           </li>
         </ul>
       </div>

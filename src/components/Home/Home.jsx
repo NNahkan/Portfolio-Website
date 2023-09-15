@@ -19,7 +19,7 @@ const Home = () => {
         to personalize it further to better reflect your unique personality and
         experiences.
       </p>
-		<p>See you here for detail</p>
+      <p className={s.homeParap}>See you here for detail</p>
     </div>
   );
 };
