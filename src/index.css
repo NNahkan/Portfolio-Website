@@ -2,12 +2,15 @@
   --main-color: #fff;
   --background-color: #000e1a;
   --oppositeMain-color: #292929;
+  --invert-boolean: 0;
 }
 
 [data-theme="light"] {
   --main-color: black;
   --background-color: white;
   --oppositeMain-color: white;
+  --invert-boolean: 1;
+
 }
 
 svg {
@@ -15,12 +18,12 @@ svg {
 }
 
 * {
-  transition: 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
 body {
   background-color: var(--background-color);
-  color: white;
+  color: var(--main-color);
   font-family: Blorado, sans-serif;
   line-height: 2;
   font-size: 18px;
@@ -53,5 +56,5 @@ ul {
 }
 
 .btn:hover {
-  letter-spacing: 1.5px;
+  letter-spacing: 1.1px;
 }

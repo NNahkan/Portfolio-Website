@@ -14,7 +14,7 @@
   font-size: 1.2rem;
   float: right;
   text-align: right;
-  border-top: 2px solid white;
+  border-top: 2px solid var(--main-color);
   padding-top: 2rem;
 }
 
@@ -48,7 +48,7 @@
   top: 9px;
   width: 1px;
   height: 92%;
-   background-color: white;
+   background-color: var(--main-color);
 }
 
 .skillSingle {
@@ -63,12 +63,11 @@
 	display: inline-block;
 	position: absolute;
 	border-radius: 50%;
-	border: 2px solid white;
+	border: 2px solid var(--main-color);
 	left: -9px;
 	top: 5px;
 	width: 16px;
 	height: 16px;
-	/* margin-top: 3px; */
-	z-index: 30;
+ 	z-index: 30;
 }
 

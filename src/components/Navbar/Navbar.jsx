@@ -1,18 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
+import profile from "../../assets/profile.png";
 
 const Navbar = () => {
   return (
     <nav className={s.navbar}>
       <div className={s.navbarFlex}>
         <Link className={s.navbarItem} to="/">
-          <img
-            src="https://avatars.githubusercontent.com/u/80037793?v=4"
-            alt=""
-          />
+          <img src={profile} alt="" />
         </Link>
         <ul className={s.navbarList}>
           <li className={s.navbarItem}>
