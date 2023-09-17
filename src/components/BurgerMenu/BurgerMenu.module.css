@@ -1,0 +1,30 @@
+.menuBar {
+  width: 45px;
+  height: 40px;
+  margin: 30px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 3;
+  border: none;
+}
+
+.bar {
+  height: 4px;
+  margin: 3px 0;
+  width: 100%;
+  background-color: #dc052d;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.toggle:nth-child(1) {
+  transform: translateY(7px) rotateZ(45deg);
+}
+.toggle:nth-child(2) {
+  transform: translateX(10px);
+  opacity:  0;
+}
+.toggle:nth-child(3) {
+  transform: translateY(-6px) rotateZ(-45deg);
+}

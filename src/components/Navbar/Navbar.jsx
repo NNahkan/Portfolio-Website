@@ -4,21 +4,12 @@ import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import profile from "../../assets/profile.png";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Navbar = () => {
   return (
     <nav className={s.navbar}>
-		<div className="menu-bar">
-			<div className="bar"></div>
-			<div className="bar"></div>
-			<div className="bar"></div>
-		</div>
-		{/* 
-		Design a symbol for user to click
-		After clicking symbol should be close button
-		Menu should appear
-		When user click the list item , menu need to disappear
-		*/}
+      <BurgerMenu />
       <div className={s.navbarFlex}>
         <Link className={s.navbarItem} to="/">
           <img src={profile} alt="" />
