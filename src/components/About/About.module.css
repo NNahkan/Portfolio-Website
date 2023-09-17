@@ -20,6 +20,7 @@
 
 .detailMeFlex {
   display: flex;
+  flex-wrap: wrap;
   margin: 4rem 0;
   gap: 5rem;
 }
@@ -48,7 +49,7 @@
   top: 9px;
   width: 1px;
   height: 92%;
-   background-color: var(--main-color);
+  background-color: var(--main-color);
 }
 
 .skillSingle {
@@ -58,16 +59,30 @@
 }
 
 .skillSingle::before {
-	content: " ";
-	background: black;
-	display: inline-block;
-	position: absolute;
-	border-radius: 50%;
-	border: 2px solid var(--main-color);
-	left: -9px;
-	top: 5px;
-	width: 16px;
-	height: 16px;
- 	z-index: 30;
+  content: " ";
+  background: var(--background-color);
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  left: -9px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  z-index: 30;
 }
 
+@media only screen and (max-width: 480px) {
+  .detailMeFlex > div {
+    flex: auto;
+  }
+
+  .skillList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+  }
+
+  .skillList::before {
+    width: 0;
+  }
+}
