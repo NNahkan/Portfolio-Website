@@ -8,6 +8,11 @@ import profile from "../../assets/profile.png";
 const Navbar = () => {
   return (
     <nav className={s.navbar}>
+		<div className="menu-bar">
+			<div className="bar"></div>
+			<div className="bar"></div>
+			<div className="bar"></div>
+		</div>
 		{/* 
 		Design a symbol for user to click
 		After clicking symbol should be close button
