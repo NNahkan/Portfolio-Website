@@ -8,6 +8,12 @@ import profile from "../../assets/profile.png";
 const Navbar = () => {
   return (
     <nav className={s.navbar}>
+		{/* 
+		Design a symbol for user to click
+		After clicking symbol should be close button
+		Menu should appear
+		When user click the list item , menu need to disappear
+		*/}
       <div className={s.navbarFlex}>
         <Link className={s.navbarItem} to="/">
           <img src={profile} alt="" />
