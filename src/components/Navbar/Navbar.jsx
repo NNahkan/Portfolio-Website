@@ -7,14 +7,20 @@ import profile from "../../assets/profile.png";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const Navbar = () => {
+  const handleList = () => {
+    const navbarItems = document.querySelectorAll(`.${s.navbarItem}`);
+    navbarItems.forEach((item, ind) => {
+      ind !== 0 && item.classList.toggle(s.isVisible);
+    });
+  };
   return (
     <nav className={s.navbar}>
-      <BurgerMenu />
       <div className={s.navbarFlex}>
         <Link className={s.navbarItem} to="/">
           <img src={profile} alt="" />
         </Link>
         <ul className={s.navbarList}>
+          <BurgerMenu handleList={handleList} />
           <li className={s.navbarItem}>
             <Link to="/contact">Contact</Link>
           </li>

@@ -7,3 +7,9 @@
   aspect-ratio: 1/1;
   cursor: pointer;
 }
+
+@media only screen and (max-width:640px) {
+	.toggleButton {
+		margin-top: .5rem;
+	}
+}

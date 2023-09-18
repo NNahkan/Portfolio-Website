@@ -1,7 +1,8 @@
 .menuBar {
+  display: none;
   width: 45px;
   height: 40px;
-  margin: 30px 20px;
+  margin: 30px 0 10px 20px;
   cursor: pointer;
   background-color: transparent;
   z-index: 3;
@@ -9,8 +10,8 @@
 }
 
 .bar {
-  height: 4px;
-  margin: 3px 0;
+  height: 3px;
+  margin: 4px 0;
   width: 100%;
   background-color: #dc052d;
   display: block;
@@ -22,9 +23,15 @@
   transform: translateY(7px) rotateZ(45deg);
 }
 .toggle:nth-child(2) {
-  transform: translateX(10px);
-  opacity:  0;
+  transform: translateX(15px);
+  opacity: 0;
 }
 .toggle:nth-child(3) {
   transform: translateY(-6px) rotateZ(-45deg);
+}
+
+@media only screen and (max-width: 640px) {
+  .menuBar {
+    display: initial;
+  }
 }
