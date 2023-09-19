@@ -7,6 +7,11 @@
   background-color: transparent;
    border: none;
   position: relative;
+  transition: .3s ease;
+}
+
+.menuBar.toggle{
+	transform: translateY(-100%);
 }
 
 .menuBar::after {
@@ -26,6 +31,7 @@
 .menuBar.toggle::after {
   width: 350px;
   height: 350px;
+  pointer-events: none; 
 }
 
 .bar {

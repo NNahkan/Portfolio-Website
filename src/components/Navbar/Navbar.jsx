@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
@@ -13,6 +13,9 @@ const Navbar = () => {
       ind !== 0 && item.classList.toggle(s.isVisible);
     });
   };
+
+ 
+
   return (
     <nav className={s.navbar}>
       <div className={s.navbarFlex}>
