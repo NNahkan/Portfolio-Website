@@ -7,6 +7,8 @@ const BurgerMenu = ({ handleList }) => {
     bars.forEach((element) => {
       element.classList.toggle(s.toggle);
     });
+    const menuBar = document.querySelector(`.${s.menuBar}`);
+    menuBar.classList.toggle(s.toggle);
     handleList();
   };
 

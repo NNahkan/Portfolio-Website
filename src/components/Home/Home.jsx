@@ -5,7 +5,7 @@ import s from "./Home.module.css";
 const Home = () => {
   return (
     <div className="container">
-      <h1 className={s.homeHeader}>Hi there! 👋</h1>
+      <h1 className={s.homeHeader}>Hi there! </h1>
       <p className={s.homeParap}>
         I'm Ali Hakan Oksuz, a seasoned frontend developer with over 2 years of
         experience. I'm passionate about crafting exceptional web experiences
