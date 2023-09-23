@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div>
       <div className={`container ${s.headerFlex}`}>
-        <h1>About Me</h1>
+        <h1 className="section-header">About Me</h1>
         <h3>
           Here you will find more information about me,what I do and my current
           skills mostly in terms of programming and technology

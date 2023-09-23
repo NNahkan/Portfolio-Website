@@ -9,7 +9,7 @@ const Contact = () => {
   ];
   return (
     <div className="container">
-      <h1>Contact</h1>
+      <h1 className="section-header">Contact</h1>
       <p>Get in touch or shoot me an email directly on hoksuz2424@gmail.com </p>
       <form className={s.contactForm} action="">
         {formData.map((item) => (
