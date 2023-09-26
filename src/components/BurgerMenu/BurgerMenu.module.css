@@ -7,7 +7,7 @@
   background-color: transparent;
    border: none;
   position: relative;
-  transition: .3s ease;
+  transition: .2s ease;
 }
 
 .menuBar.toggle{

@@ -10,7 +10,6 @@
   --background-color: white;
   --oppositeMain-color: white;
   --invert-boolean: 1;
-
 }
 
 svg {
@@ -27,6 +26,7 @@ body {
   font-family: Blorado, sans-serif;
   line-height: 2;
   font-size: 18px;
+  margin: 0;
 }
 ul {
   padding: 0;
@@ -35,7 +35,8 @@ ul {
 .homePage {
   max-width: 1200px;
   margin: auto;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
+  overflow: hidden;
 }
 
 .container {
@@ -45,7 +46,7 @@ ul {
 }
 
 .section-header {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 .btn {
