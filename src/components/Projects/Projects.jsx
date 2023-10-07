@@ -51,8 +51,7 @@ const Projects = () => {
         </p>
       </div>
       <div className={s.projectsWrap}>
-        <div>
-          {data.map((item) => (
+           {data.map((item) => (
             <div key={item.link} className={s.projectSingle}>
               <div className={s.imgWrap}>
                 <a href={item.link} target="_blank" rel="noreferrer">
@@ -65,8 +64,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+       </div>
     </div>
   );
 };
