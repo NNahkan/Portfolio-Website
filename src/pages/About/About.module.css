@@ -68,7 +68,12 @@
   z-index: 30;
 }
 
-@media only screen and (max-width: 480px) {
+.experiencesFlex {
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
   .detailMeFlex > div {
     flex: auto;
   }

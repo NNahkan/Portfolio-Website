@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import s from "./About.module.css";
+import Experience from "../../components/Experience/Experience";
 
 const About = () => {
   const skillData = [
@@ -14,6 +15,42 @@ const About = () => {
     "github",
     "agile",
     "mongoDB",
+  ];
+
+  const experiencesData = [
+    {
+      name: "Wisdm ",
+      position: "Front-end Developer",
+      year: "Apr 2023 - present",
+      location: "San Francisco",
+      definitions: [
+        "Collaborating with the development team to design and implement user interfaces with using React-native for the app",
+        "Integrating third-party libraries and APIs for enhanced functionality",
+        "Optimizing app components for both iOS and Android platforms",
+      ],
+    },
+    {
+      name: "Ucyel Energy Engineering",
+      position: "Intern",
+      year: "2021",
+      location: "Ankara, Turkey",
+      definitions: [
+        "Worked on the exist systems that use electricity to operate the turbine",
+        "Research, create, and test materials used to make wind turbines, and ensure that",
+      ],
+    },
+    {
+      name: "SDT Space & Defence Technologies",
+      position: "Intern",
+      year: "2020",
+      location: "Ankara, Turkey",
+      definitions: [
+        "Used machine learning to find and detect object in the satellite pictures",
+        "Wrote code, performed testing and debugging, and provided documentation throughout the software development process",
+        "Utilized object-oriented programming and design patterns to develop well-structured",
+        "Implemented software features using python",
+      ],
+    },
   ];
   return (
     <div>
@@ -71,6 +108,13 @@ const About = () => {
             grow. If you have a good opportunity that matches my skills and
             experience then don't hesitate to contact me.
           </p>
+        </div>
+      </div>
+      <div className="container">
+        <div className={s.experiencesFlex}>
+          {experiencesData.map((item) => (
+            <Experience key={item.name} item={item} />
+          ))}
         </div>
       </div>
     </div>
