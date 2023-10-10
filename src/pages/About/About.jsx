@@ -2,6 +2,7 @@
 import React from "react";
 import s from "./About.module.css";
 import Experience from "../../components/Experience/Experience";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 
 const About = () => {
   const skillData = [
@@ -110,12 +111,13 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="container">
-        <div className={s.experiencesFlex}>
+      <div className={s.work} >
+        <h1>Work Experiences</h1>
+        <VerticalTimeline className={s.experiencesFlex}>
           {experiencesData.map((item) => (
             <Experience key={item.name} item={item} />
           ))}
-        </div>
+        </VerticalTimeline>
       </div>
     </div>
   );

@@ -68,9 +68,9 @@
   z-index: 30;
 }
 
-.experiencesFlex {
-	display: flex;
-	flex-direction: column;
+.work .experiencesFlex {
+  padding: 0 0.5rem;
+  margin: 5rem auto;
 }
 
 @media only screen and (max-width: 600px) {
