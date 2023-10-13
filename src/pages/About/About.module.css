@@ -19,6 +19,7 @@
   flex-wrap: wrap;
   margin: 4rem 0;
   gap: 5rem;
+  letter-spacing: 1.6px;
 }
 
 .detailMeFlex > div h2 {
@@ -27,6 +28,7 @@
 
 .introduce {
   flex: 5;
+  line-height: 2.2;
 }
 
 .mySkills {
@@ -69,8 +71,12 @@
 }
 
 .work .experiencesFlex {
-  padding: 0 0.5rem;
+  padding: 0;
   margin: 5rem auto;
+}
+
+.work .experiencesFlex::before {
+  background: var(--main-color);
 }
 
 @media only screen and (max-width: 600px) {

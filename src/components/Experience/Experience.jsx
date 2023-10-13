@@ -7,13 +7,17 @@ const Experience = ({ item }) => {
   const { name, position, year, location, definitions } = item;
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work"
-      contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-      contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
+      className={`vertical-timeline-element--work ${s.experienceCard}`}
+      contentStyle={{ background: "var(--verticalList-color)", color: "#fff" }}
+      contentArrowStyle={{
+        borderRight: "7px solid  var(--verticalList-color)",
+      }}
       date={year}
+		iconClassName={s.elementIcon}
     >
       <h3 className="vertical-timeline-element-title">{name}</h3>
       <h4 className="vertical-timeline-element-subtitle">{position}</h4>
+		<div>a</div>
       <p>{location}</p>
       <ul>
         {definitions.map((work, ind) => (

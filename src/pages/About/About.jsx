@@ -53,6 +53,13 @@ const About = () => {
       ],
     },
   ];
+
+  const aboutMeData = [
+    `I'm Ali, a Frontend Web Developer with a deep passion for crafting captivating online experiences. I hold a degree in Electrical and Electronic Engineering from Kadirhas University, and I've had the privilege of calling the USA my home for the past 3 years.`,
+    `As a Frontend Web Developer, my focus is on the art of creating the front-end of websites and web applications. I believe in the power of the user interface to shape the success of a product. You're welcome to explore some of my projects in the Projects section to get a sense of my work.`,
+    `Sharing knowledge with the developer community is a privilege I cherish. I've had the opportunity to learn from so many talented individuals, and it's a pleasure to give back and help others in their learning journey. I'm always on the lookout for opportunities`,
+    `Where I can contribute, learn, and grow. If you have a role that aligns with my skills and experience, please don't hesitate to reach out. I'd be honored to explore the possibilities with you.`,
+  ];
   return (
     <div>
       <div className={`container ${s.headerFlex}`}>
@@ -75,45 +82,17 @@ const About = () => {
         </div>
         <div className={s.introduce}>
           <h2>Time to know me!</h2>
-          <p>
-            I'm a Frontend Web Developer building the Front-end of Websites and
-            Web Applications that leads to the success of the overall product.
-            Check out some of my work in the Projects section.
-          </p>
-          <p>
-            I also like sharing content related to the stuff that I have learned
-            over the years in Web Development so it can help other people of the
-            Dev Community. Feel free to Connect or Follow me on my Linkedin
-            where I post useful content related to Web Development and
-            Programming
-          </p>
-          <p>
-            I'm open to Job opportunities where I can contribute, learn and
-            grow. If you have a good opportunity that matches my skills and
-            experience then don't hesitate to contact me.
-          </p>
-          <p>
-            I'm a Frontend Web Developer building the Front-end of Websites and
-            Web Applications that leads to the success of the overall product.
-            Check out some of my work in the Projects section.
-          </p>
-          <p>
-            I also like sharing content related to the stuff that I have learned
-            over the years in Web Development so it can help other people of the
-            Dev Community. Feel free to Connect or Follow me on my Linkedin
-            where I post useful content related to Web Development and
-            Programming
-          </p>
-          <p>
-            I'm open to Job opportunities where I can contribute, learn and
-            grow. If you have a good opportunity that matches my skills and
-            experience then don't hesitate to contact me.
-          </p>
+          {aboutMeData.map((paragraph, ind) => (
+            <p key={`${ind}${paragraph.slice(0, 3)}`}>{paragraph}</p>
+          ))}
         </div>
       </div>
-      <div className={s.work} >
+      <div className={s.work}>
         <h1>Work Experiences</h1>
-        <VerticalTimeline className={s.experiencesFlex}>
+        <VerticalTimeline
+         //  lineColor="var(--main-color)"
+          className={s.experiencesFlex}
+        >
           {experiencesData.map((item) => (
             <Experience key={item.name} item={item} />
           ))}
