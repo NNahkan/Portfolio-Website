@@ -13,11 +13,12 @@ const Experience = ({ item }) => {
         borderRight: "7px solid  var(--verticalList-color)",
       }}
       date={year}
-		iconClassName={s.elementIcon}
+      dateClassName={s.cardDate}
+      iconClassName={s.elementIcon}
+      iconStyle={{ background: "var(--background-color)", color: "#fff" }}
     >
       <h3 className="vertical-timeline-element-title">{name}</h3>
       <h4 className="vertical-timeline-element-subtitle">{position}</h4>
-		<div>a</div>
       <p>{location}</p>
       <ul>
         {definitions.map((work, ind) => (

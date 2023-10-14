@@ -90,8 +90,7 @@ const About = () => {
       <div className={s.work}>
         <h1>Work Experiences</h1>
         <VerticalTimeline
-         //  lineColor="var(--main-color)"
-          className={s.experiencesFlex}
+           className={s.experiencesFlex}
         >
           {experiencesData.map((item) => (
             <Experience key={item.name} item={item} />
