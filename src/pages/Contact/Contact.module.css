@@ -15,11 +15,11 @@
   margin-bottom: 2rem;
   outline: none;
   border: none;
-  border-right: 1px ridge var(--main-color);
-  border-bottom: 1px solid var(--main-color);
-  border-radius: 8px;
+   border-bottom: 1px solid var(--main-color);
+  border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s ease-in-out;
+  /* box-shadow: 0 5px 50px var(--oppositeMain-color); */
 }
 
 .inputForm:focus {

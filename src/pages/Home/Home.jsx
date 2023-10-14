@@ -7,7 +7,7 @@ const Home = () => {
     <div className="container">
       <h1 className="section-header">Hi there! </h1>
       <p className={s.homeParap}>
-        I'm Ali Hakan Oksuz, an experienced frontend developer with over 2 years
+        I'm Ali Oksuz, an experienced frontend developer with over 2 years
         of dedicated work in crafting exceptional web experiences. My passion
         lies in transforming lines of code into engaging digital journeys.
         <p className={s.homeParap}>
