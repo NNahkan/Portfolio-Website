@@ -30,6 +30,7 @@ const RouteError = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+		style={{padding:'2rem 0'}}
     >
       <motion.h1 variants={itemVariants}>404 Error</motion.h1>
       <motion.h3 variants={itemVariants}>
@@ -39,11 +40,10 @@ const RouteError = () => {
         We don't have error in our website
       </motion.h3>
       <motion.h3 variants={itemVariants}>
-        Never ever ever{" "}
+        Never ever ever ever{" "}
         <span style={{ color: "red" }}>
-          {" "}
-          while(1) &#123; print 'ever' &#125;
-        </span>{" "}
+          while (true) &#123; print ('ever') &#125;
+        </span>
       </motion.h3>
       <motion.h5
         variants={itemVariants}

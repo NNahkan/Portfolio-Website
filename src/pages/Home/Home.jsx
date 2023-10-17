@@ -6,12 +6,11 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="container">
-		<Link to='/ss'>error</Link>
       <h1 className="section-header">Hi there! </h1>
       <p className={s.homeParap}>
-        I'm Ali Oksuz, an experienced frontend developer with over 2 years
-        of dedicated work in crafting exceptional web experiences. My passion
-        lies in transforming lines of code into engaging digital journeys.
+        I'm Ali Oksuz, an experienced frontend developer with over 2 years of
+        dedicated work in crafting exceptional web experiences. My passion lies
+        in transforming lines of code into engaging digital journeys.
         <p className={s.homeParap}>
           {" "}
           My work is defined by a love for clean, minimalistic designs. I find

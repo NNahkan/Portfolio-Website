@@ -48,6 +48,7 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
+          console.log(error);
           alert("Something went wrong.");
         }
       );
@@ -67,7 +68,7 @@ const Contact = () => {
             className={s.inputForm}
             key={item.name}
             name={item.name}
-            type="text"
+            type={item.type}
             placeholder={item.name}
             value={formInputs[item.name]}
             onChange={(e) => handleChange(e)}

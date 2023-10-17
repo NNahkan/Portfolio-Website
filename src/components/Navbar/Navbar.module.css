@@ -1,5 +1,5 @@
 .navbar {
-  background-color: var(--background-color);
+  background-color: transparent;
   color: var(--main-color);
   padding: 2rem 0;
   font-size: 1.2rem;
@@ -86,7 +86,7 @@
     margin: 0;
     display: none;
     pointer-events: none;
-   }
+  }
 
   .navbarItem.isVisible {
     display: block;
