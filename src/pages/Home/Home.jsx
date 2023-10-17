@@ -1,10 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import s from "./Home.module.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div className="container">
+		<Link to='/ss'>error</Link>
       <h1 className="section-header">Hi there! </h1>
       <p className={s.homeParap}>
         I'm Ali Oksuz, an experienced frontend developer with over 2 years
