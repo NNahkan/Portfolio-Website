@@ -4,6 +4,21 @@ import saas from "../../assets/saas.png";
 import commerceWithApi from "../../assets/commerceWithApi.png";
 import commerce from "../../assets/commerce.png";
 import poke from "../../assets/poke.png";
+import { motion } from "framer-motion";
+
+const projectVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: .6,
+    },
+  },
+};
 
 const Projects = () => {
   const data = [
@@ -52,7 +67,14 @@ const Projects = () => {
       </div>
       <div className={s.projectsWrap}>
         {data.map((item) => (
-          <div key={item.link} className={s.projectSingle}>
+          <motion.div
+            key={item.link}
+            className={s.projectSingle}
+            variants={projectVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <div className={s.imgWrap}>
               <a href={item.link} target="_blank" rel="noreferrer">
                 <img src={item.image} alt="" />
@@ -62,7 +84,7 @@ const Projects = () => {
               <h4>{item.header}</h4>
               <p>{item.detail} </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

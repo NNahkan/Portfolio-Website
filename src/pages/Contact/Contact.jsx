@@ -2,11 +2,17 @@
 import React, { useRef, useState } from "react";
 import s from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
+import { AnimatePresence, motion } from "framer-motion";
 
 const FORM_OBJ = {
   name: "",
   email: "",
   message: "",
+};
+
+const spanVariants = {
+  hidden: { opacity: 0, x: 100 },
+  visible: { opacity: 1, x: 0 },
 };
 
 const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -24,24 +30,19 @@ const Contact = () => {
     setFormInputs((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleBlur = ({ target: { name } }) => {
-    console.log(name);
-    formErrors[name] && console.log(formErrors);
-    setFormErrors((prev) => ({ ...prev, [name]: undefined }));
-  };
-
   const isStateFilled = () => {
-    setFormErrors({});
+    let newErrors = {};
     for (const key in formInputs) {
-      if (!formInputs[key]) {
-        setFormErrors((prev) => ({ ...prev, [key]: `${key} can't be empty` }));
+      if (!formInputs[key].trim(" ")) {
+        newErrors = { ...newErrors, [key]: `${key} can't be empty` };
       }
     }
-    formErrors && console.log("hata vercek");
-    return false;
+    setFormErrors(newErrors);
+    return Object.keys(newErrors).length ? false : true;
   };
 
   const sendEmail = () => {
+    setLoading(true);
     emailjs
       .send(
         serviceId,
@@ -64,47 +65,56 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          alert("Something went wrong.");
         }
       );
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    isStateFilled() ? sendEmail() : alert("wrong");
-    setLoading(false);
+    isStateFilled() && sendEmail();
+  };
+
+  const capitalizeSentence = (sentence) => {
+    const capitalized = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    return capitalized;
   };
 
   const formData = [
     { type: "text", name: "name" },
     { type: "email", name: "email" },
   ];
+
   return (
     <div className="container">
       <h1 className="section-header">Contact</h1>
-      {formErrors && <p>{formErrors.name}</p>}
-      {formErrors && <p>{formErrors.email}</p>}
-      {formErrors && <p>{formErrors.message}</p>}
       <p>Get in touch or shoot me an email directly on hoksuz2424@gmail.com </p>
       <form ref={formRef} className={s.contactForm} onSubmit={handleSubmit}>
         {formData.map((item) => (
-          <div style={{ position: "relative" }} key={item.name}>
+          <div key={item.name} style={{ position: "relative" }}>
             <input
               className={s.inputForm}
               name={item.name}
               type={item.type}
-              onBlur={(e) => handleBlur(e)}
               placeholder={item.name}
               value={formInputs[item.name]}
               onChange={(e) => handleChange(e)}
             />
-            {formErrors[item.name] && (
-              <span className={s.errorFormMessage}>
-                {item.name} {formErrors[item.name]}
-              </span>
-            )}
+            <AnimatePresence>
+              {formErrors[item.name] && !formInputs[item.name].trim(" ") && (
+                <motion.span
+                  key={item.name}
+                  className={s.errorFormMessage}
+                  variants={spanVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  // transition={{ duration: 2 }}
+                >
+                  {capitalizeSentence(formErrors[item.name])}
+                </motion.span>
+              )}
+            </AnimatePresence>
           </div>
         ))}
         <div style={{ position: "relative" }}>
@@ -116,7 +126,20 @@ const Contact = () => {
             value={formInputs.message}
             onChange={(e) => handleChange(e)}
           />
-          <span className={s.errorFormMessage}>Message problem problem</span>
+          <AnimatePresence>
+            {formErrors.message && !formInputs.message.trim(" ") && (
+              <motion.span
+                key="message"
+                className={s.errorFormMessage}
+                variants={spanVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+              >
+                {capitalizeSentence(formErrors.message)}
+              </motion.span>
+            )}
+          </AnimatePresence>
         </div>
         <button className="btn">{loading ? "Sending" : "Send Message"}</button>
       </form>

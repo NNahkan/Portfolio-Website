@@ -5,17 +5,19 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.8,
+      staggerChildren: 0.5,
     },
   },
 };
 
 const itemVariants = {
   hidden: {
-    x: "-100vw",
+    x: "-100",
+    opacity: 0,
   },
   visible: {
     x: 0,
+    opacity: 1,
     transition: {
       type: "spring",
       stiffness: 30,
@@ -30,7 +32,7 @@ const RouteError = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-		style={{padding:'2rem 0'}}
+      style={{ padding: "2rem 0" }}
     >
       <motion.h1 variants={itemVariants}>404 Error</motion.h1>
       <motion.h3 variants={itemVariants}>

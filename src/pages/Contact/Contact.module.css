@@ -22,24 +22,22 @@
   transition: 0.3s ease-in-out;
 }
 
-.inputForm:active, .inputForm:focus {
-  background-color: red;
+.inputForm:focus {
+  /* background-color: var(--oppositeMain-color); */
+  background-color: transparent;
 }
 
 .errorFormMessage {
   position: absolute;
   right: 0;
-  top: 0px;
+  top: 0;
   color: var(--error-color);
-  z-index: -1;
+  z-index: 1;
+
 }
 
 .inputForm[type="email"] {
   text-transform: none;
-}
-
-.inputForm:focus {
-  background-color: var(--oppositeMain-color);
 }
 
 .messageArea {
