@@ -89,9 +89,7 @@ const About = () => {
       </div>
       <div className={s.work}>
         <h1>Work Experiences</h1>
-        <VerticalTimeline
-           className={s.experiencesFlex}
-        >
+        <VerticalTimeline className={s.experiencesFlex}>
           {experiencesData.map((item) => (
             <Experience key={item.name} item={item} />
           ))}

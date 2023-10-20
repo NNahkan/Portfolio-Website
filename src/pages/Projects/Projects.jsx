@@ -46,25 +46,25 @@ const Projects = () => {
         </p>
         <p>
           The world of digital design and development is constantly evolving and
-          so has my role over the last 3 years. I’m still learning and gaining
+          so has my role over the last 2 years. I’m still learning and gaining
           new skills every day.
         </p>
       </div>
       <div className={s.projectsWrap}>
-           {data.map((item) => (
-            <div key={item.link} className={s.projectSingle}>
-              <div className={s.imgWrap}>
-                <a href={item.link} target="_blank" rel="noreferrer">
-                  <img src={item.image} alt="" />
-                </a>
-              </div>
-              <div>
-                <h4>{item.header}</h4>
-                <p>{item.detail} </p>
-              </div>
+        {data.map((item) => (
+          <div key={item.link} className={s.projectSingle}>
+            <div className={s.imgWrap}>
+              <a href={item.link} target="_blank" rel="noreferrer">
+                <img src={item.image} alt="" />
+              </a>
             </div>
-          ))}
-       </div>
+            <div>
+              <h4>{item.header}</h4>
+              <p>{item.detail} </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
