@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import s from "./Navbar.module.css";
+import burgerMenuStyle from "../BurgerMenu/BurgerMenu.module.css";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import profile from "../../assets/profile.png";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
@@ -14,7 +15,22 @@ const Navbar = () => {
     });
   };
 
- 
+  const handleBurgerMenu = () => {
+    const bars = document.querySelectorAll(`.${burgerMenuStyle.bar}`);
+    const menuBar = document.querySelector(`.${burgerMenuStyle.menuBar}`);
+    bars.forEach((element) => {
+      element.classList.toggle(burgerMenuStyle.toggle);
+    });
+    menuBar.classList.toggle(burgerMenuStyle.toggle);
+    handleList();
+  };
+
+  const closeBurgerMenu = () => {
+    const isMenuActive = document.querySelector(`.${s.isVisible}`);
+    isMenuActive && handleBurgerMenu();
+  };
+
+  const navListData = ["contact", "about", "projects"];
 
   return (
     <nav className={s.navbar}>
@@ -23,16 +39,15 @@ const Navbar = () => {
           <img src={profile} alt="" />
         </Link>
         <ul className={s.navbarList}>
-          <BurgerMenu handleList={handleList} />
-          <li className={s.navbarItem}>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className={s.navbarItem}>
-            <Link to="/about">About</Link>
-          </li>
-          <li className={s.navbarItem}>
-            <Link to="/projects">Projects</Link>
-          </li>
+          <BurgerMenu handleBurgerMenu={handleBurgerMenu} />
+          {navListData.map((item) => (
+            <li key={item} className={s.navbarItem}>
+              <Link to={`/${item}`} onClick={closeBurgerMenu}>
+                {" "}
+                {item}
+              </Link>
+            </li>
+          ))}
           <li className={s.navbarItem}>
             <ToggleTheme />
           </li>

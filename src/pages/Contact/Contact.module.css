@@ -44,11 +44,8 @@
 }
 
 .messageArea {
-  resize: none;
-  font-size: 0.9rem;
-  letter-spacing: 1.2px;
+  resize: none; 
+  transition: none;
 }
 
-.messageArea::placeholder {
-  font-size: 1.5rem;
-}
+

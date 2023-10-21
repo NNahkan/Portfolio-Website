@@ -85,6 +85,8 @@ const Contact = () => {
     { type: "email", name: "email" },
   ];
 
+  const isLonger = formInputs.message.length > 180;
+
   return (
     <div className="container">
       <h1 className="section-header">Contact</h1>
@@ -119,9 +121,10 @@ const Contact = () => {
         <div style={{ position: "relative" }}>
           <textarea
             className={`${s.inputForm} ${s.messageArea}`}
+            style={isLonger ? { fontSize: "1rem" } : {}}
             name="message"
             placeholder="Message"
-            rows="5"
+            rows={isLonger ? 8 : 5}
             value={formInputs.message}
             onChange={(e) => handleChange(e)}
             maxLength="320"
