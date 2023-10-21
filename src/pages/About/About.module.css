@@ -79,14 +79,14 @@
   background: var(--main-color);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 640px) {
   .detailMeFlex > div {
     flex: auto;
   }
 
   .skillList {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .skillList::before {

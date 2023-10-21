@@ -33,13 +33,22 @@
   top: 0;
   color: var(--error-color);
   z-index: 1;
-
 }
 
 .inputForm[type="email"] {
   text-transform: none;
 }
 
+.inputForm[type="email"]::placeholder {
+  text-transform: capitalize;
+}
+
 .messageArea {
   resize: none;
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+}
+
+.messageArea::placeholder {
+  font-size: 1.5rem;
 }

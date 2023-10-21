@@ -34,7 +34,7 @@ const Contact = () => {
     let newErrors = {};
     for (const key in formInputs) {
       if (!formInputs[key].trim(" ")) {
-        newErrors = { ...newErrors, [key]: `${key} can't be empty` };
+        newErrors = { ...newErrors, [key]: `${key} is a required field` };
       }
     }
     setFormErrors(newErrors);
@@ -109,7 +109,6 @@ const Contact = () => {
                   initial="hidden"
                   animate="visible"
                   exit="hidden"
-                  // transition={{ duration: 2 }}
                 >
                   {capitalizeSentence(formErrors[item.name])}
                 </motion.span>
@@ -125,6 +124,7 @@ const Contact = () => {
             rows="5"
             value={formInputs.message}
             onChange={(e) => handleChange(e)}
+            maxLength="320"
           />
           <AnimatePresence>
             {formErrors.message && !formInputs.message.trim(" ") && (
